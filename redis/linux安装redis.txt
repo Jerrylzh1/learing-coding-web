@@ -1,0 +1,62 @@
+rpm 安装指令：
+	i ：安装应用程序（install）
+	e：卸载应用程序（erase）
+	vh：显示安装进度（verbose hash）
+	U：升级软件包 （update）
+	qa：显示所有已安装软件包 （query all）
+
+
+bin目录主要安装一些软件的脚本：
+	启动redis服务的脚本文件  redis-server
+	连接redis客户啊短脚本文件	redis-cli
+
+redis的默认端口为：6379
+
+
+删除key
+del key
+
+判断某个key是否存在
+
+exists key .....判断一个或者多个key是否存在
+
+查看 key
+keys * 匹配所有key
+keys h?lle  ?代表匹配一个任意字符
+keys h*llo  *代表匹配一个多个任意字符
+keys h[ae]llo   []匹配一个[]中包含指定字符
+
+移动key到指定db
+move key 库的编号  标号从0开始 最多15 默认只有16
+
+
+pexpire 给已存在的键设置超时时间
+
+TTL 重点掌握
+
+TTL key  返回过期时间 返回单位： 秒
+	注意： -1 代表key 永久存在
+	          -2 代表key 不存在
+	          >=0 代表key设置的时间
+
+返回key过期时间 毫秒
+pttl  key 返回单位 毫秒
+
+随机返回一个key
+
+randomkey 
+
+修改key的值：
+rename key newkey
+
+用来查看key所对应的值的类型
+type key
+
+给已存在的key设置超时时间
+expire key 秒 用来作为手机验证码的实效时间
+
+
+
+
+
+
